@@ -1,0 +1,43 @@
+/* * {
+    color: blue;
+    margin-top: 10px;
+    margin-left: 10px;
+} */
+
+/* Selectores de etiqueta */
+
+/* body{
+
+}
+h1  {
+    color:green
+}
+
+p{
+    color: peru;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4{} */
+
+
+/* Etiqueta de clase */
+
+/* .estilo_titulo {
+    color: blueviolet;
+}
+
+#estilo_id_malapractica {
+    color: rgb(25, 91, 4);
+    font-weight:bolder;
+} */
+
+.estilo_imagen{
+    width: 200px;
+    box-shadow: 1em 1em 10px 13px #534d30;
+    border-radius: 10px;
+}
+
+.estilo_titulo{
+    color: #71AE68 ;
+}
