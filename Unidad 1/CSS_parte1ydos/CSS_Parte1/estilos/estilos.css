@@ -94,3 +94,44 @@ Con numeros enteros  (Rojo, Verde, Azul). Los valos van de 0 al 255 o porcentaje
 .hexa {
     color: #ad644198;
 }
+
+
+/* Evento Hover */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/:modal */
+
+a:hover{
+    font-size: 40px;
+}
+
+.left, .right{
+    float:left;
+}
+
+.left{
+    background: red;
+    width: 200px;
+    height: 300px;
+    transition: width 1s ;
+}
+
+.right{
+    background: blue;
+    width: 300px;
+    height: 300px;
+    transition: width 1s;
+}
+
+.left:hover{
+    width: 300px;
+}
+
+/* Minimizar CSS */
+/* 
+
+https://www.toptal.com/developers/cssminifier 
+
+https://csscompressor.net/
+
+*/
