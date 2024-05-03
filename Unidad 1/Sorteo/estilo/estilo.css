@@ -1,0 +1,31 @@
+body {
+    background-color: rgba(190, 209, 178, 0.5);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.div_contenedor{
+    border: rgb(5, 44, 8) 2px solid;
+    padding: 20px;
+    width: 500px;
+}
+
+/* Boton */
+.btn {
+    border: none;
+    color: black;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+.success {
+    background-color: white;
+    border: 2px solid #04AA6D;
+}
+
+.success:hover {
+    background-color: #46a049;
+    color: white;
+}

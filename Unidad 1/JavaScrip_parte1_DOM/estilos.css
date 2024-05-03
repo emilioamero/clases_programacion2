@@ -1,0 +1,14 @@
+.bordes,
+td,
+th {
+  border: 1px solid;
+}
+
+.campotexto {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 24px;
+}
+
+.campotexto2 {
+  color: coral;
+}

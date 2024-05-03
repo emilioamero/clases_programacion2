@@ -101,9 +101,10 @@ Con numeros enteros  (Rojo, Verde, Azul). Los valos van de 0 al 255 o porcentaje
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/:modal */
 
-a:hover{
+ a:hover{
     font-size: 40px;
-}
+    background-color: yellow;
+} 
 
 .left, .right{
     float:left;
