@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Context Menu</title>
+    <script>
+        function handleContextMenu(event) {
+            event.preventDefault();
+            alert('¡Se abrió el menú contextual!');
+        }
+    </script>
+</head>
+<body>
+    <div oncontextmenu="handleContextMenu(event)" style="width: 200px; height: 200px; background-color: lightgray;">
+        Haz clic derecho aquí
+    </div>
+</body>
+</html>

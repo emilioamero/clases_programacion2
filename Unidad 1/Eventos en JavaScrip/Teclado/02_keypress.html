@@ -1,0 +1,17 @@
+<!-- keypress (obsoleto, usar keydown y keyup) -->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Key Press</title>
+    <script>
+        function handleKeyPress(event) {
+            alert('Tecla presionada: ' + event.key);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeypress="handleKeyPress(event)" placeholder="Presiona una tecla">
+</body>
+</html>

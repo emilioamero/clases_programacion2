@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Input</title>
+    <script>
+        function handleInput(event) {
+            console.log('Valor actual: ' + event.target.value);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" oninput="handleInput(event)" placeholder="Escribe algo y ver consola">
+</body>
+</html>

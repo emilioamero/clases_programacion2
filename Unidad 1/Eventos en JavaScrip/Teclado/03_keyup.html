@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Key Up</title>
+    <script>
+        function handleKeyUp(event) {
+            alert('Tecla soltada: ' + event.key);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onkeyup="handleKeyUp(event)" placeholder="Suelta una tecla">
+</body>
+</html>

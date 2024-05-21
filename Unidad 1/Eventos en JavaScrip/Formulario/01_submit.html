@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Submit</title>
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            alert('¡Formulario enviado!');
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="handleSubmit(event)">
+        <input type="text" placeholder="Escribe algo">
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

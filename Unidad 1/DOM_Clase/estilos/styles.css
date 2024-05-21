@@ -6,3 +6,14 @@
 .estilo2{
     background-color:rgba(219, 125, 58, 0.774);
 }
+
+
+.estilo3{
+    border: solid red 3px;
+}
+.estilo3:hover{
+    cursor: pointer;
+}
+
+
+

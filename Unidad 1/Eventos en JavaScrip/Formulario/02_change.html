@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evento Change</title>
+    <script>
+        function handleChange(event) {
+            alert('Valor cambiado a: ' + event.target.value);
+        }
+    </script>
+</head>
+<body>
+    <input type="text" onchange="handleChange(event)" placeholder="Cambia el valor">
+</body>
+</html>
