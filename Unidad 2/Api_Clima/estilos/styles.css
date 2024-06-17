@@ -1,0 +1,120 @@
+.labelTemperaturacss {
+  font-size: 70px;
+  font-weight: 600;
+  text-align: right;
+  margin-top: 22px;
+  margin-left: 110px;
+}
+
+.colordiv {
+  height: 20px;
+  border: 1px solid;
+  margin: 1px;
+}
+
+/* .alert-info {
+  color: #0c5460;
+  background-color: #f3f1f6;
+  border-color: #311f4c;
+} */
+
+.color1 {
+  background-color: #311f4c;
+}
+.color2 {
+  background-color: #563d7c;
+}
+.color3 {
+  background-color: #927bb4;
+}
+.color4 {
+  background-color: #f3f1f6;
+}
+
+body {
+  /*   background-image: url("./assets/img/fondo3.png");
+ */
+  background-color: #f3f1f6;
+  margin: auto;
+}
+
+.descclima {
+  color: #311f4c;
+}
+
+/* .bordeimagen{
+  border: 1px solid;
+} */
+
+.bordecard {
+  border-color: #563d7c;
+}
+
+.botoneslilas {
+  color: #fff !important;
+  background-color: #563d7c !important;
+  border-color: #563d7c !important;
+}
+
+.botoneslilas:hover {
+  color: #fff !important;
+  background-color: #927bb4 !important;
+  border-color: #927bb4 !important;
+}
+
+.climalugar {
+  font-weight: 600;
+}
+
+/* Icono Carga */
+
+.lds-ripple {
+  display: inline-block;
+  /*  position: relative; */
+  width: 80px;
+  height: 80px;
+
+  margin-top: 15%;
+  margin-left: 30%;
+  position: absolute;
+}
+.lds-ripple div {
+  position: absolute;
+  border: 7px solid #563d7c;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.lds-ripple div:nth-child(2) {
+  animation-delay: 1s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 46px;
+    left: 46px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  4.9% {
+    top: 46px;
+    left: 46px;
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+  5% {
+    top: 46px;
+    left: 46px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 82px;
+    height: 82px;
+    opacity: 0;
+  }
+}

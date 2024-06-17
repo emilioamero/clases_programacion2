@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Clima - Programación 2</title>
+    <link rel="icon" type="image/x-icon" href="./iconos/sun.ico">
+
+    <link rel="stylesheet" href="./estilos/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="./estilos/styles.css" />
+
+    <script src="./codigo/combo.js" defer></script>
+    <script src="./codigo/script.js" defer></script>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">API Clima - Programación 2</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="card bordecard mb-3">
+            <div class="card-header">Busqueda</div>
+            <div class="card-body">
+              <!--  <label> Ciudad </label> -->
+              <select class="custom-select" id="select1">
+                <!-- <option value="0" disabled selected>
+                  Selecione una ciudad
+                </option>
+                <option value="ar.X5900">Villa Maria</option>
+                <option value="ar.X5186">Alta Gracia</option>
+                <option value="ar.X2553">Justiniano Posse</option>
+                <option value="ar.V9410">Tierra del Fuego</option>
+                <option value="es.28001">Madrid (España)</option>
+                <option value="-23.49,-46.71">Rio de Janeiro (Brazil)</option>
+                <option value="40.7247, -74.09">Nueva York (EEUU)</option> -->
+              </select>
+              <button
+                type="button"
+                class="btn botoneslilas mt-3 btn-block"
+                onclick="cargarClima()"
+              >
+                Buscar
+              </button>
+            </div>
+          </div>
+          <div id="alerta" class="alert alert-danger" role="alert">
+            Debe Selecionar una Ciudad
+          </div>
+
+          <div id="innerhtmldiv"></div>
+
+          <div class="card bordecard mb-3">
+            <div class="card-header">Colores</div>
+            <div class="card-body">
+              <div class="color1 colordiv"></div>
+              <div class="color2 colordiv"></div>
+              <div class="color3 colordiv"></div>
+              <div class="color4 colordiv"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <div class="card bordecard mb-3">
+            <div class="card-header">
+              <h6 id="climalugar" class="climalugar">Clima</h6>
+            </div>
+            <div class="row">
+              <div class="col-lg-6 col-sm-12">
+                <div id="animacioncargaclima" class="lds-ripple">
+                  <div></div>
+                  <div></div>
+                </div>
+
+                <label for="" id="valortemperatura" class="labelTemperaturacss">
+                  -
+                </label>
+              </div>
+              <div class="col-lg-6 col-sm-12">
+                <img
+                  id="imagenclima"
+                  class="card-img-top"
+                  src="./img_apiclima/imagenpordefecto.png"
+                />
+              </div>
+            </div>
+
+            <div class="card-body">
+              <h3 id="descclima" class="card-title descclima">
+                Seleccione una Ciudad ...
+              </h3>
+
+              <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Sensacion Termica</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="sensaciontermica"
+                      placeholder="-"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Humedad</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="humedad"
+                      placeholder="-"
+                      readonly
+                    />
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Latitud Estacion</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control"
+                      id="valorlatitud"
+                      placeholder="-"
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputEmail4">Longitud Estacion</label>
+                    <input
+                      type="text"
+                      readonly
+                      class="form-control"
+                      id="valorlongitud"
+                      placeholder="-"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-3">
+                    <label for="inputAddress">Veloc. Viento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="velocidadviento"
+                      placeholder="-"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group col-md-3">
+                    <label for="inputAddress">Direcc .Viento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="direccionvientocod"
+                      placeholder="-"
+                      readonly
+                    />
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="inputAddress">Descripción Viento</label>
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="direccionviento"
+                      placeholder="-"
+                      readonly
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  
+    <script src="./estilos/bootstrap.min.js"></script>
+  </body>
+</html>

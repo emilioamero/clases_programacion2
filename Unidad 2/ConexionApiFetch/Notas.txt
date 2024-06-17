@@ -1,0 +1,24 @@
+
+powerpoint
+
+Metodos HTTP
+https://developer.mozilla.org/es/docs/Web/HTTP/Methods
+
+
+Status HTTP
+https://developer.mozilla.org/es/docs/Web/HTTP/Status
+
+api para la clase
+https://jsonplaceholder.typicode.com/guide/
+
+
+Fetch (Nativo js)
+Axios (Libreria)
+
+
+api clima 
+https://developer.weatherunlocked.com/documentation/localweather
+
+
+
+socket ?
