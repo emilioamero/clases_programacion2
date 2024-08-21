@@ -3,6 +3,21 @@
 //Llamamos a la funcion 
 obtenerUsuarios();
 
+
+function eliminarUsuario(codigo){
+ //mensaje de confirmacion
+
+    axios.delete('http://localhost:3000/data/' + codigo)
+    .then(respuesta => {
+        alert("Usuario Eliminado")
+    })
+    .catch(error => {
+        // Manejar errores
+        console.error('Hubo un problema con la solicitud:', error);
+    });
+}
+
+
 function obtenerUsuarios() {
     //Utilizo Axios,tambien s epuede usar Fetch
     axios.get('http://localhost:3000/data')
@@ -12,6 +27,8 @@ function obtenerUsuarios() {
 
             //Tomamos todos los datos recibidos, accedemos 
             let datos = respuesta.data;
+
+            console.log(respuesta);
 
             //Tomamos instancia de la tabla que es la parte dinamica 
             let table_usuario = document.getElementById("table_usuario");
@@ -30,9 +47,28 @@ function obtenerUsuarios() {
                 let datoNombre = document.createElement('td');
                 datoNombre.textContent = registro.nombre;
 
+                let celdaAcciones = document.createElement('td');
+
+                let botonEliminar = document.createElement('button');
+                botonEliminar.textContent="Eliminar";
+                botonEliminar.addEventListener('click', function() {
+                    eliminarUsuario(registro.id);
+                });
+
+                let botonConsultar = document.createElement('button');
+                botonConsultar.textContent="Consultar";
+
+                let botonModificar= document.createElement('button');
+                botonModificar.textContent="Modificar";
+
+                celdaAcciones.appendChild(botonEliminar);
+                celdaAcciones.appendChild(botonConsultar);
+                celdaAcciones.appendChild(botonModificar);
+
                 //Agrego la Celda a la fila
                 filaTabla.appendChild(datoCodigo);
                 filaTabla.appendChild(datoNombre);
+                filaTabla.appendChild(celdaAcciones);
 
                 //Agrego fila a la tabla
                 table_usuario.appendChild(filaTabla);
