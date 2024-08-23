@@ -5,6 +5,13 @@
     font-weight: 700;
 }
 
+.cssformulario{
+    background-color: aliceblue;
+    margin-left: 150px;
+    padding: 25px;
+    width: 500px;
+}
+
 body {
     font-family: Helvetica;
     -webkit-font-smoothing: antialiased;

@@ -4,17 +4,23 @@
 obtenerUsuarios();
 
 
-function eliminarUsuario(codigo){
- //mensaje de confirmacion
+function eliminarUsuario(codigo) {
+    //mensaje de confirmacion
 
     axios.delete('http://localhost:3000/data/' + codigo)
-    .then(respuesta => {
-        alert("Usuario Eliminado")
-    })
-    .catch(error => {
-        // Manejar errores
-        console.error('Hubo un problema con la solicitud:', error);
-    });
+        .then(respuesta => {
+            alert("Usuario Eliminado")
+        })
+        .catch(error => {
+            // Manejar errores
+            console.error('Hubo un problema con la solicitud:', error);
+        });
+}
+
+function consultarDatos(registroConsultado) {
+    let nombre = document.getElementById("nombre");
+    nombre.value = registroConsultado.nombre;
+    nombre.disabled = true;
 }
 
 
@@ -43,23 +49,26 @@ function obtenerUsuarios() {
 
                 //Creamos por DOM las Celdas de la tabla 
                 let datoCodigo = document.createElement('td');
-                datoCodigo.textContent = registro.id; 
+                datoCodigo.textContent = registro.id;
                 let datoNombre = document.createElement('td');
                 datoNombre.textContent = registro.nombre;
 
                 let celdaAcciones = document.createElement('td');
 
                 let botonEliminar = document.createElement('button');
-                botonEliminar.textContent="Eliminar";
-                botonEliminar.addEventListener('click', function() {
+                botonEliminar.textContent = "Eliminar";
+                botonEliminar.addEventListener('click', function () {
                     eliminarUsuario(registro.id);
                 });
 
                 let botonConsultar = document.createElement('button');
-                botonConsultar.textContent="Consultar";
+                botonConsultar.textContent = "Consultar";
+                botonConsultar.addEventListener('click', function () {
+                    consultarDatos(registro);
+                });
 
-                let botonModificar= document.createElement('button');
-                botonModificar.textContent="Modificar";
+                let botonModificar = document.createElement('button');
+                botonModificar.textContent = "Modificar";
 
                 celdaAcciones.appendChild(botonEliminar);
                 celdaAcciones.appendChild(botonConsultar);
