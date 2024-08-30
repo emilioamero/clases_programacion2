@@ -1,0 +1,55 @@
+-en el backend (posicionarse a la altura donde esta el archivo package.json) ejecutar en consola: npm install para instalar las dependencias de Node
+
+En el archivo database.js del backend se encuentran las credenciales de la base de datos, sea localhost (mysql instalado en sus pc) o del instituto (192.168.3.10)
+
+-luego ejecutar npmrun desarrollo
+
+en la consola debera decir:
+Servidor escuchando en http://localhost:3000 -> Esto es porque servidor esta funcionando
+Conexión exitosa a la base de datos MySQL -> esto es porque se conecto la base de datos
+
+
+
+----------------------------------------------------------------------------
+
+
+endpoints
+
+get todos los usuarios
+http://localhost:3000/api/users
+
+
+post 
+http://localhost:3000/api/users
+
+{
+  "nombre": "Juan",
+  "email": "juan@example.com"
+}
+
+
+put 
+http://localhost:3000/api/users
+
+{
+  "nombre": "Juan",
+  "email": "juan@example.com"
+}
+
+
+
+
+get solo uno 
+http://localhost:3000/api/users/:id
+
+
+
+
+-----------Crear Tabla usuarios------------------
+
+CREATE TABLE `usuario` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `nombre` varchar(100) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 

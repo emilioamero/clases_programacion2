@@ -1,0 +1,108 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+table {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif;
+    font-size: 12px;
+    margin: 45px;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+
+}
+
+th {
+    font-size: 13px;
+    font-weight: normal;
+    padding: 8px;
+    background: #b9c9fe;
+    border-top: 4px solid #aabcfe;
+    border-bottom: 1px solid #fff;
+    color: #039;
+}
+
+td {
+    padding: 8px;
+    background: #e8edff;
+    border-bottom: 1px solid #fff;
+    color: #669;
+    border-top: 1px solid transparent;
+}
+
+tr:hover td {
+    background: #d0dafd;
+    color: #339;
+}
+
+/* Botones */
+
+.btn {
+    border: none;
+    color: black;
+    padding: 4px 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.primary {
+    background-color: white;
+    border: 2px solid #007bff;
+}
+
+.primary:hover {
+    background: #0b7dda;
+    color: white;
+}
+
+.secondary {
+    background-color: white;
+    border: 2px solid #e7e7e7;
+}
+
+.secondary:hover {
+    background: #ddd;
+    color: white;
+}
+
+.success {
+    background-color: white;
+    border: 2px solid #04AA6D;
+}
+
+.success:hover {
+    background-color: #46a049;
+    color: white;
+}
+
+.warning {
+    background-color: white;
+    border: 2px solid #ff9800;
+}
+
+.warning:hover {
+    background: #e68a00;
+    color: white;
+}
+
+.danger {
+    background-color: white;
+    border: 2px solid #f44336;
+}
+
+.danger:hover {
+    background: #da190b;
+    color: white;
+}
+
+/* Formulario */
+
+.bordeform {
+    border: 4px solid #aabcfe;
+    color: #039;
+    padding: 4px 4px;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 20px;
+}
